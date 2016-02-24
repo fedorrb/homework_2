@@ -1,6 +1,5 @@
 package homework2;
 /**
- * 
  * @author FedorRB
  * @version 1.1
  */
