@@ -9,10 +9,9 @@ public class Triangle extends Shape {
 	private Point b;
 	private Point c;
 	/**
-	 * конструктор с параметрами
-	 * @param a вершина треугольника "a" класса Point
-	 * @param b вершина треугольника "b" класса Point
-	 * @param c вершина треугольника "c" класса Point
+	 * @param a apex of the triangle "a" 
+	 * @param b apex of the triangle "b" 
+	 * @param c apex of the triangle "c"
 	 */
 	public Triangle(Point a, Point b, Point c) {
 		super();

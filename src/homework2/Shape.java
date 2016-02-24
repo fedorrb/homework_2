@@ -2,16 +2,16 @@ package homework2;
 /**
  * @author FedorRB
  * @version 1.1
- * Абстрактный класс описывающий методы фигуры
+ * An abstract class describing shapes methods
  */
 public abstract class Shape {
 	/**
-	 * @return периметр фигуры
+	 * @return shape perimeter 
 	 */
 	abstract double perimetr();
 	
 	/**
-	 * @return площадь фигуры
+	 * @return shape area
 	 */
 	abstract double area();
 }

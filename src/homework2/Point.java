@@ -7,10 +7,9 @@ public class Point {
 	private double x;
 	private double y;
 	/**
-	 * конструктор с параметрами
-	 * @param значение x координаты точки 
-	 * @param значение y координаты точки
-	 * 
+	 * constructor 
+	 * @param value x coordinate of the point 
+	 * @param value y coordinate of the point
 	 */
 	public Point(double x, double y) {
 		super();
@@ -23,10 +22,9 @@ public class Point {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
 	/**
-	 * 
-	 * @param a коодинаты точки а (Point)
-	 * @param b коодинаты точки b (Point)
-	 * @return расстояние между точками
+	 * @param coordinate of the point а (Point)
+	 * @param coordinate of the point b (Point)
+	 * @return distance between points
 	 */
 	public static double distance(Point a, Point b) {
         return Math.hypot(a.getX() - b.getX(), a.getY() - b.getY());
