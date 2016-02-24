@@ -1,7 +1,7 @@
 package homework2;
 /**
  * @author FedorRB
- * @version 1.1
+ * @version 1.2
  */
 public class Point {
 	private double x;
@@ -10,6 +10,7 @@ public class Point {
 	 * конструктор с параметрами
 	 * @param значение x координаты точки 
 	 * @param значение y координаты точки
+	 * 
 	 */
 	public Point(double x, double y) {
 		super();
