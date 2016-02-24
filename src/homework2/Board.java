@@ -1,5 +1,9 @@
 package homework2;
-
+/**
+ * 
+ * @author FedorRB
+ * @version 1.1
+ */
 public class Board {
 	private Shape[] shapeArray = new Shape[4];
 
@@ -63,6 +67,7 @@ public class Board {
 	@Override
 	public String toString() {
 		double totalArea = 0;
+		/*
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < shapeArray.length; i++) {
 			if (shapeArray[i] != null) {
@@ -72,7 +77,19 @@ public class Board {
 				sb.append((i + 1) + ") Free \n");
 			}
 		}
-		sb.append(String.format("Total area = %.2f", totalArea));
+		sb.append(String.format("Total area = %.2f", totalArea));		
+		*/
+		//foreach
+		StringBuilder sb = new StringBuilder();
+		for (Shape shape: shapeArray) {
+			if (shape != null) {
+				sb.append(shape + "\n");
+				totalArea += shape.area(); 
+			} else {
+				sb.append(" Free \n");
+			}
+		}
+		sb.append(String.format("Total area = %.2f", totalArea));		
 		return sb.toString();
 	}
 }

@@ -1,13 +1,19 @@
 package homework2;
-
+/**
+ * 
+ * @author FedorRB
+ * @version 1.1
+ */
 public class Triangle extends Shape {
 	private Point a;
 	private Point b;
 	private Point c;
-	private double sideAB;
-	private double sideAC;
-	private double sideBC;
-
+	/**
+	 * конструктор с параметрами
+	 * @param a вершина треугольника "a" класса Point
+	 * @param b вершина треугольника "b" класса Point
+	 * @param c вершина треугольника "c" класса Point
+	 */
 	public Triangle(Point a, Point b, Point c) {
 		super();
 		this.a = a;
@@ -17,27 +23,19 @@ public class Triangle extends Shape {
 
 	@Override
 	double perimetr() {
-		calcSide();
-		return sideAB + sideAC + sideBC;
+		return Point.distance(a, b) + Point.distance(a, c) + Point.distance(b, c);
 	}
 
 	@Override
 	double area() {
-		calcSide();
-		double p = (sideAB + sideAC + sideBC) / 2;
-		return  Math.sqrt(p*(p-sideAB)*(p-sideAC)*(p-sideBC));		
+		double p = (Point.distance(a, b) + Point.distance(a, c) + Point.distance(b, c)) / 2;
+		return  Math.sqrt(p*(p-Point.distance(a, b))*(p-Point.distance(a, c))*(p-Point.distance(b, c)));		
 	}
 	
 	@Override
 	public String toString() {
 		return String.format("Triangle [a= %s, b= %s, c= %s], perimetr()=%.2f, area()=%.2f",
 				a, b, c, perimetr(), area());	
-	}
-
-	private void calcSide(){
-		sideAB = Math.sqrt(Math.pow(a.getX() - b.getX(),2) + Math.pow(a.getY() - b.getY(),2));
-		sideAC = Math.sqrt(Math.pow(a.getX() - c.getX(),2) + Math.pow(a.getY() - c.getY(),2));
-		sideBC = Math.sqrt(Math.pow(b.getX() - c.getX(),2) + Math.pow(b.getY() - c.getY(),2));		
 	}
 
 }
