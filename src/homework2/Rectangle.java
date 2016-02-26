@@ -1,6 +1,7 @@
 package homework2;
 
 public class Rectangle extends Shape {
+	public static final String NAME = "rectangle ";
 	private Point a;
 	private Point c;
 
@@ -20,6 +21,13 @@ public class Rectangle extends Shape {
 	double area() {
 		return (Math.abs(a.getX() - c.getX()) * Math.abs(a.getY() - c.getY()));
 	}
+
+	@Override
+	boolean isValid(){
+		if(a.getX() != c.getX() && a.getY() != c.getY())
+			return true;
+		return false;
+	}	
 
 	@Override
 	public String toString() {

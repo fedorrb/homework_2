@@ -1,6 +1,7 @@
 package homework2;
 
 public class Circle extends Shape {
+	public static final String NAME = "circle ";
 	private Point a;
 	private double r;
 
@@ -18,6 +19,14 @@ public class Circle extends Shape {
 	@Override
 	double area() {
 		return r*r*Math.PI;
+	}
+	
+	@Override
+	boolean isValid(){
+		if(r > 0)
+			return true;
+		else
+			return false;
 	}
 
 	@Override

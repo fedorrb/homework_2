@@ -3,6 +3,8 @@ package homework2;
  * @author FedorRB
  * @version 1.2
  */
+import java.text.DecimalFormat;
+
 public class Point {
 	private double x;
 	private double y;
@@ -17,10 +19,11 @@ public class Point {
 		this.y = y;
 	}
 	
-	@Override
-	public String toString() {
-		return "Point [x=" + x + ", y=" + y + "]";
-	}
+	public String formatDouble(double format) {
+		String formattedDouble = new DecimalFormat("#0.00").format(format);
+		return formattedDouble;
+	}	
+
 	/**
 	 * @param coordinate of the point à (Point)
 	 * @param coordinate of the point b (Point)
@@ -29,6 +32,11 @@ public class Point {
 	public static double distance(Point a, Point b) {
         return Math.hypot(a.getX() - b.getX(), a.getY() - b.getY());
     }	
+	
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y + "]";
+	}
 	
 	public void setXY(double x, double y) {
 		this.x = x;

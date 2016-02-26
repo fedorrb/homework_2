@@ -14,4 +14,9 @@ public abstract class Shape {
 	 * @return shape area
 	 */
 	abstract double area();
+	
+	/**
+	 * @return check matching the figure type
+	 */
+	abstract boolean isValid();
 }

@@ -27,6 +27,19 @@ public class Main {
 		board.delShape(2);
 		System.out.println(board.isPartHasShape(2));
 		System.out.println(board.isPartHasShape(1));
+		/** test valid triangle*/
+		Triangle triangleThree = new Triangle(a, b, b);
+		if(!triangleThree.isValid()){
+			System.out.println("It is not triangle! " + triangleThree);
+			triangleThree = null;
+		}
+		Point e = new Point(2, 0);
+		triangleThree = new Triangle(a, c, e);
+		if(!triangleThree.isValid()){
+			System.out.println("It is not triangle! " + triangleThree);
+			triangleThree = null;
+		}		
+		/** */		
 	}
 
 }
