@@ -36,7 +36,7 @@ public class Rectangle extends Shape {
 	}
 
 	public Point getA() {
-		return a;
+		return new Point(a.getX(), a.getY());
 	}
 
 	public void setA(Point a) {
@@ -44,7 +44,7 @@ public class Rectangle extends Shape {
 	}
 
 	public Point getC() {
-		return c;
+		return new Point(c.getX(), c.getY());		
 	}
 
 	public void setC(Point c) {

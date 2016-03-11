@@ -36,7 +36,7 @@ public class Circle extends Shape {
 	}
 
 	public Point getA() {
-		return a;
+		return new Point(a.getX(), a.getY());
 	}
 
 	public void setA(Point a) {
